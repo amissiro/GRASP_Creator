@@ -1,18 +1,28 @@
 <?php
 include_once('Engine.php');
 include_once('Transmission.php');
+
 /**
- * Created by PhpStorm.
- * User: azretmissirov
- * Date: 2/18/16
- * Time: 2:48 PM
+ * Class Cars1 [Non GRASP Creator]
  */
 class Cars1
 {
+	/**
+	 * @var Engine The engine object.
+	 */
 	private $engine;
 
+	/**
+	 * @var Transmission The transmission object.
+	 */
 	private $transmission;
 
+	/**
+	 * Cars1 constructor.
+	 *
+	 * @param Engine       $engine               The engine object.
+	 * @param Transmission $transmission         The transmission object.
+	 */
 	public function __construct(Engine $engine, Transmission $transmission)
 	{
 		$this->engine       = $engine;
@@ -23,5 +33,6 @@ class Cars1
 $engine       = new Engine(3.5, 229);
 $transmission = new Transmission('Manual');
 
+//Create a new car object
 $car  = new Cars1($engine, $transmission);
 

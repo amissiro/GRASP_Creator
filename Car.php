@@ -1,18 +1,29 @@
 <?php
 include_once('Engine.php');
 include_once('Transmission.php');
+
 /**
- * Created by PhpStorm.
- * User: azretmissirov
- * Date: 2/18/16
- * Time: 2:48 PM
+ * Class Cars [GRASP Creator]
  */
 class Cars
 {
+	/**
+	 * @var Engine The engine object.
+	 */
 	private $engine;
 
+	/**
+	 * @var Transmission The transmission object.
+	 */
 	private $transmission;
 
+	/**
+	 * Cars constructor [GRASP Creator].
+	 *
+	 * @param float  $engineSize         The engine size.
+	 * @param float  $horsePowers        The horse powers.
+	 * @param string $transmissionType   The transmission type.
+	 */
 	public function __construct($engineSize, $horsePowers, $transmissionType)
 	{
 		$this->engine       = new Engine($engineSize, $horsePowers);
@@ -20,8 +31,9 @@ class Cars
 	}
 }
 
-//GRASP Creator
+//Create a new car object
 $car = new Cars(3.5, 229, 'Manual');
 
-//Non-GRASP Creator
+print_r($car);
+
 

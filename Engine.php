@@ -1,17 +1,26 @@
 <?php
 
 /**
- * Created by PhpStorm.
- * User: azretmissirov
- * Date: 2/18/16
- * Time: 2:48 PM
+ * Class Engine
  */
 class Engine
 {
+	/**
+	 * @var $size  The engine size.
+	 */
 	private $size;
 
+	/**
+	 * @var $hp The horse powers.
+	 */
 	private $hp;
 
+	/**
+	 * Engine constructor.
+	 *
+	 * @param float $size   The engine size.
+	 * @param float $hp     The horse powers.
+	 */
 	public function __construct($size, $hp)
 	{
 		$this->size = $size;
